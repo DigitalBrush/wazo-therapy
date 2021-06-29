@@ -44,14 +44,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
 						<dl>
 							<?php if ( ! empty( $curauth->user_url ) ) : ?>
-								<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
+								<dt><?php esc_html_e( 'Website', 'wazotherapy' ); ?></dt>
 								<dd>
 									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 								</dd>
 							<?php endif; ?>
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
-								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
+								<dt><?php esc_html_e( 'Profile', 'wazotherapy' ); ?></dt>
 								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
 						</dl>
@@ -76,7 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								);
 								?>
 								<?php understrap_posted_on(); ?>
-								<?php esc_html_e( 'in', 'understrap' ); ?>
+								<?php esc_html_e( 'in', 'wazotherapy' ); ?>
 								<?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>

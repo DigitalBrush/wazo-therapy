@@ -3,4 +3,69 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: #3D5A66; 
+
+$wazo-blue: #6C8D99;
+$wazo-dark: #2A3D45;
+$wazo-charcoal: #1A1D1E;
+$wazo-lightblue: #A1C4CA;
+$wazo-green: #5F6E6B;
+$wazo-brown: #685C59;
+$wazo-orange: #B5745B;
+$wazo-grey: #C7BFBC;
+$wazo-border-color: #EFF0F2;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$body-font: 'GT Walsheim Pro', sans-serif;
+
+$shadow: 1px 3px 5px 2px rgba(59, 66, 70, 0.15);
+$cutout-size: 1rem;
+
+// Spacing
+
+$spacing-xs: 5px;
+$spacing: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+$spacing-xxl: 50px;
+$spacing-max: 64px;
+$spacing-big: 128px;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1240px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 750px,
+  lg: 980px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");

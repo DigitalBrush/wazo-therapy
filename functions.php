@@ -33,3 +33,39 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+
+function wpb_login_logo() { ?>
+    <style type="text/css">
+    .login {
+        background: #f3f3f3;
+    }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri(); ?>/img/wazo-web-logo.svg);
+            height:100px;
+            width:300px;
+            background-size: 300px 100px;
+            background-repeat: no-repeat;
+            padding-bottom: 10px;
+        }
+		.login form {
+			border-radius: 5px;
+			border: 0 !important;
+		}
+		.login .button-primary {
+			background-color: #6C8D99 !important;
+			border-color: #6C8D99 !important;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' );
+
+function wpb_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'wpb_login_logo_url' );
+ 
+function wpb_login_logo_url_title() {
+    return 'EasyRad';
+}
+add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );

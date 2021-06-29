@@ -1,1 +1,53 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+    font-family: $body-font;
+    line-height: 1.8;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    color: $primary;
+}
+
+.btn {
+	border-radius: 50px;
+	font-size: 16px;
+	padding: 12px 24px;
+	margin: $spacing 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: normal;
+    line-height: 21px;
+	&.btn-primary {
+		color: $white !important;
+		&.no-dash {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&.btn-secondary {
+		color: $white !important;
+		background-color: $wazo-dark;
+		border: 0;
+		position: relative;
+    }
+    &.btn-outline-* {
+        border: 2px;
+    }
+
+    &.btn-cta {
+        background-color: $wazo-orange;
+        border-color: $wazo-orange;
+    }
+}
+
+
+.section {
+    &.hero {
+        
+    }
+}

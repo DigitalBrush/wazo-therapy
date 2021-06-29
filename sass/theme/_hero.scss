@@ -1,0 +1,70 @@
+.hero { 
+    background-image: url('../img/wazo-hero-bg-light.jpg');
+    background-size: cover;
+    height: 100%;
+    min-height: 700px;
+    display: flex;
+    position: relative;
+    .hero-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-image: url('../img/hero-overlay.svg');
+        background-size: cover;
+    }
+    .hero-header {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        .hero-text {
+            display: flex;
+            align-items: center;
+            .slider-text {
+                position: relative;
+                .big-heading {
+                    padding: 0 0 16px 0;
+                    position: relative;
+                }
+                .small-heading {
+                    padding: $spacing-lg 0 0;
+                    font-weight: 600;
+                    span {
+                        color: $primary;
+                    }
+                }
+                .hero-intro-text {
+                    color: $wazo-dark;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                @include media-breakpoint-down(xs) {
+                    padding: $spacing-lg;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .hero-image {
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            .slider-image {
+                height: 100%;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .slider-logo {
+                background: $white;
+                padding: $spacing-lg $spacing-max;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
