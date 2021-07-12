@@ -18,6 +18,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Prata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" rel="stylesheet"> 
 	<?php wp_head(); ?>
 </head>
 
@@ -39,12 +44,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container h-100">
 				
 				<div class="row header-bar h-100">
-					<div class="col-lg-2 logo-bar">
-						<div class="toggler-button d-lg-none d-flex">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'alcof' ); ?>">
-							<span class="material-icons">menu</span>
-							</button>	
-						</div>
+					<div class="col-lg-2 col-sm-4 logo-bar">
+						
 						<div class="brand">
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
@@ -53,8 +54,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						</div>
-						<div class="contact-top d-md-none d-flex">
-							<span class="material-icons">call</span>
+						<div class="toggler-button d-lg-none d-flex">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'alcof' ); ?>">
+							<span class="material-icons">menu</span>
+							</button>	
 						</div>
 						
 					</div>
@@ -78,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-lg-2 header-cta">
+					<div class="col-lg-2 col-sm-4 header-cta">
 						<a href="#" class="btn btn-primary btn-cta">Book session</a>
 					</div>
 				</div>

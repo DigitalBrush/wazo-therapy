@@ -5,6 +5,9 @@
     min-height: 700px;
     display: flex;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        background-position-x: 40%;
+    }
     .hero-overlay {
         position: absolute;
         bottom: 0;
@@ -34,13 +37,14 @@
                     }
                 }
                 .hero-intro-text {
-                    color: $wazo-dark;
+                    color: $wazo-brown;
                     font-weight: 300;
                     font-size: 24px;
                     line-height: 32px;
+                    max-width: 500px;
                 }
                 @include media-breakpoint-down(xs) {
-                    padding: $spacing-lg;
+                    padding: $spacing-sm;
                     margin: 0 auto;
                 }
             }

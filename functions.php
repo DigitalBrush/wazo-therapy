@@ -69,3 +69,8 @@ function wpb_login_logo_url_title() {
     return 'EasyRad';
 }
 add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
+
+function register_my_menu() {
+	register_nav_menu('footer-menu',__( 'Footer Menu' ));
+	}
+	add_action( 'init', 'register_my_menu' );

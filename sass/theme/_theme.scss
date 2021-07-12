@@ -1,13 +1,19 @@
 body {
     font-family: $body-font;
-    line-height: 1.8;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 55px;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 60px;
     color: $primary;
+    font-family: $heading-font;
+    @include media-breakpoint-down(sm) {
+        font-size: 36px;
+        line-height: 42px;
+    }
 }
 
 .btn {
@@ -35,19 +41,220 @@ h1 {
 		border: 0;
 		position: relative;
     }
-    &.btn-outline-* {
-        border: 2px;
+    &.btn-hero {
+        border-width: 2px;
+        font-size: 18px;
+        padding: $spacing-sm $spacing-xl;
+        color: $wazo-orange !important;
+        border-color: $wazo-orange;
+        &:hover {
+            background-color: $wazo-orange !important;
+            color: $white !important;
+        }
     }
 
     &.btn-cta {
-        background-color: $wazo-orange;
+        color: $wazo-orange !important;
         border-color: $wazo-orange;
+        background-color: transparent;
+        border-width: 2px;
+        &:hover {
+            background-color: $wazo-orange !important;
+            color: $white !important;
+        }
     }
+    &.btn-icon {
+        padding: $spacing-sm;
+        font-size: 24px;
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $wazo-brown;
+    text-align: center;
 }
 
 
 .section {
+    padding: 100px 0;
+    .section-heading {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: $spacing-max;
+        .section-title {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: $wazo-brown;
+            text-align: center;
+        }
+        .sub-title {
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+            color: $primary;
+            font-weight: 200;
+        }
+    }
     &.hero {
-        
+        padding: 0;
+    }
+    &.services {
+        .service-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacing-max;
+            .service-col {
+                text-align: center;
+                padding: $spacing-lg;
+                border-radius: $spacing;
+                box-shadow: $shadow;
+                margin-bottom: $spacing-lg;
+                .service-icon {
+                    padding: $spacing-sm;
+                    margin-bottom: $spacing-sm;
+                }
+                .service-title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    text-align: center;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    color: $wazo-blue;
+                    margin-bottom: $spacing-md;
+                }
+                .service-text {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 21px;
+                    text-align: center;
+                    color: $wazo-brown;
+                }
+                &.dark {
+                    background: $wazo-dark;
+                    .service-title {
+                        color: $white;
+                    }
+                    .service-text {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .membership-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .member {
+                padding: $spacing-lg;
+            }
+        }
+    }
+    &.home-cta {
+        background: $wazo-dark;
+        color: $white;
+        text-align: center;
+        padding: $spacing-max 0;
+    }
+    &.profile {
+        padding: 0;
+        position: relative;
+        .section-intro {
+            margin-right: 0;
+            margin-left: auto;
+            padding: 130px 30px;
+            max-width: 585px;
+            .section-title {
+                text-align: left;
+                color: $wazo-orange;
+            }
+            .profile-title {
+                font-family: $heading-font;
+                font-weight: 800;
+                color: $primary;
+                margin: $spacing-sm 0;
+            }
+            .sub-title {
+                text-align: left;
+            }
+        }
+        .profile-image {
+            background-image: url('../img/meet-Bernice.jpg');
+            background-size: cover;
+            background-position: left center;
+            background-repeat: no-repeat;
+            min-height: 600px;
+            @include media-breakpoint-down(sm) {
+                min-height: 300px;
+            }
+        }
+        .profile-social {
+            display: flex;
+            align-items: center;
+            margin: $spacing 0;
+            .btn-icon {
+                margin-right: $spacing-sm;
+            }
+        }
+    }
+    &.quote {
+        text-align: center;
+        background-color: #f6f2ee;
+        .quote-text {
+            text-align: center;
+            span {
+                font-family: $body-font;
+                font-weight: 100;
+                display: block;
+            }
+        }
+
+    }
+}
+
+#videoModal {
+    .modal-content {
+  
+      background-color: transparent;
+      border: 0;
+      @include media-breakpoint-up(sm) {
+        width: 600px;
+      }
+  
+      .modal-header {
+        border: 0;
+        margin-bottom: $spacing-xs;
+        .close {
+          background: $wazo-orange;
+          color: $white;
+          border-radius: 50px;
+          line-height: .5;
+          padding: 0.8rem;
+          opacity: 1;
+        }
+      }
+  
+      .modal-body {
+        padding: 0;
+        iframe {
+            border-radius: $spacing;
+            overflow: hidden;
+        }
+      }
+  
+      .modal-footer {
+        border: 0;
+        justify-content: center;
+        flex-direction: column;
+        color: $white;
+      }
     }
 }

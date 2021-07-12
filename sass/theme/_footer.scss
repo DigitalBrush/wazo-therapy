@@ -1,0 +1,12 @@
+.site-footer {
+    text-align: center;
+    .brand {
+        margin: $spacing 0;
+        .navbar-brand {
+            width: 150px;
+        }
+    }
+    .footer-nav {
+        display: block;
+    }
+}

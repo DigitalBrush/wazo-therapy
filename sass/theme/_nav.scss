@@ -13,20 +13,20 @@
         align-items: center;
         .navbar-brand {
             background-color: $white;
-            padding: $spacing;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 0 0 $spacing-xs $spacing-xs;
             img {
                 width: 180px;
                 @include media-breakpoint-down(md) {
                     width: 150px;
                 }
-                @include media-breakpoint-down(sm) {
-                    width: 100px;
-                }
             }
         }      
     }
     .navbar-collapse {
+        padding: $spacing-lg 0;
         &.show {
             background: $white;
             padding: $spacing-lg 0;
@@ -42,11 +42,10 @@
             align-items: stretch;
         }
         .logo-bar {
-            padding: 0;
+            padding: $spacing;
             height: 100%;
             @include media-breakpoint-down(md) {
                 display: flex;
-                flex-direction: row-reverse;
                 justify-content: space-between;
             }
             @include media-breakpoint-down(sm) {
@@ -56,15 +55,14 @@
                 padding: $spacing;
                 .navbar-toggler {
                     border: 0;
-                    border-color: rgba(255, 255, 255, 1);
-                    color: $white;
+                    border-color: 0;
+                    color: $wazo-orange;
                     text-decoration: none;
                     float: left;
-                    background-color: $wazo-dark;
-                    width: 48px;
-                    height: 48px;
+                    background-color: transparent;
+                    padding: .25rem;
                     .navbar-toggler-icon {
-                        border-color: rgba(255, 255, 255, 1)!important;
+                        border-color: rgba(181, 116, 91, 1)!important;
                         font-size: 1.5rem;
                     }
                     &:hover {
@@ -85,6 +83,7 @@
                 
             }
             .material-icons {
+                font-size: 36px;
                 @include media-breakpoint-down(xs) {
                     margin-right: 0 !important;
                 }
@@ -112,7 +111,7 @@
             font-weight: 500;
             padding: 0.8rem !important;
             text-transform: uppercase;
-            color: $wazo-dark !important;
+            color: $primary !important;
             &:hover {
                 font-weight: 600;
                 color: $wazo-dark;
