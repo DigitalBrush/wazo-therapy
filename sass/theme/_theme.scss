@@ -112,30 +112,27 @@ h1 {
             align-items: center;
             margin-bottom: $spacing-max;
             .service-col {
-                text-align: center;
+                text-align: left;
                 padding: $spacing-lg;
                 border-radius: $spacing;
-                box-shadow: $shadow;
                 margin-bottom: $spacing-lg;
+                border: 2px solid $wazo-beige;
                 .service-icon {
                     padding: $spacing-sm;
                     margin-bottom: $spacing-sm;
                 }
                 .service-title {
-                    font-size: 18px;
+                    font-size: 24px;
                     font-weight: bold;
-                    line-height: 24px;
-                    text-align: center;
-                    letter-spacing: 0.2em;
-                    text-transform: uppercase;
-                    color: $wazo-blue;
+                    line-height: 28px;
+                    color: $primary;
                     margin-bottom: $spacing-md;
+                    font-family: $heading-font;
                 }
                 .service-text {
                     font-weight: normal;
                     font-size: 16px;
                     line-height: 21px;
-                    text-align: center;
                     color: $wazo-brown;
                 }
                 &.dark {
@@ -146,6 +143,9 @@ h1 {
                     .service-text {
                         color: $white;
                     }
+                }
+                &.focus {
+                    border: 3px solid $wazo-beige;
                 }
             }
         }
@@ -207,7 +207,7 @@ h1 {
     }
     &.quote {
         text-align: center;
-        background-color: #f6f2ee;
+        background-color: $wazo-beige;
         .quote-text {
             text-align: center;
             span {

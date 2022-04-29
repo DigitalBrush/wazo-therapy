@@ -1,12 +1,31 @@
 .site-footer {
-    text-align: center;
-    .brand {
-        margin: $spacing 0;
-        .navbar-brand {
-            width: 150px;
+    text-align: left;
+    padding: $spacing 0;
+    .widgets {
+        padding: $spacing-lg 0;
+        .brand {
+            margin: $spacing 0;
+            .navbar-brand {
+                width: 150px;
+            }
+        }
+        .footer-nav {
+            display: block;
+            h4 {
+                font-family: $heading-font;
+                color: $wazo-brown;
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+        .footer-brand {
+            .social {
+                a {
+                    margin-right: $spacing-sm;
+                    padding: $spacing;
+                }
+            }
         }
     }
-    .footer-nav {
-        display: block;
-    }
 }
+

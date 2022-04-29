@@ -34,6 +34,20 @@ foreach ( $understrap_includes as $file ) {
 	require_once $filepath;
 }
 
+add_post_type_support( 'page', 'excerpt' );
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+
+function wpb_custom_new_menu() {
+	register_nav_menus(
+	  array(
+		'services-menu' => __( 'Services Menu' ),
+		'quick-links' => __( 'Quick Links' ),
+		'legal-menu' => __( 'Legal Menu' )
+	  )
+	);
+  }
+  add_action( 'init', 'wpb_custom_new_menu' );
+
 
 function wpb_login_logo() { ?>
     <style type="text/css">
@@ -66,7 +80,7 @@ function wpb_login_logo_url() {
 add_filter( 'login_headerurl', 'wpb_login_logo_url' );
  
 function wpb_login_logo_url_title() {
-    return 'EasyRad';
+    return 'Wazo Therapy';
 }
 add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
 

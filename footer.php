@@ -24,34 +24,80 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
-					<div class="brand">
-						<!-- Your site title as branding in the menu -->
-						<?php if ( ! has_custom_logo() ) { ?>
+					<div class="row widgets">
 
-						<?php } else {
-						the_custom_logo();
-						} ?><!-- end custom logo -->
+						<div class="col-md-3">
+
+
+							<div class="footer-nav">
+								<h4>Quick links</h4>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'quick-links',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'menu_id'         => 'quick-links',
+										'depth'           => 2,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+								?>
+							</div>
+
+						</div>
+						<div class="col-md-3">
+
+							<div class="footer-nav">
+								<h4>Services</h4>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'services-menu',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'menu_id'         => 'services-menu',
+										'depth'           => 2,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+								?>
+							</div>
+						</div>
+						<div class="col-md-3">
+
+							<div class="footer-nav">
+								<h4>Legal</h4>
+								<?php wp_nav_menu(
+									array(
+										'theme_location'  => 'legal-menu',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'menu_id'         => 'legal-menu',
+										'depth'           => 2,
+										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+								?>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footer-brand">
+								<div class="brand">
+									<!-- Your site title as branding in the menu -->
+									<?php if ( ! has_custom_logo() ) { ?>
+
+									<?php } else {
+									the_custom_logo();
+									} ?><!-- end custom logo -->
+								</div>
+								<div class="social d-flex">
+									<a href="https://twitter.com/wazotherapy" target="_blank" class="btn btn-sm btn-icon btn-primary"><span class="mdi mdi-twitter"></span></a>
+									<a href="https://linkedin.com/wazotherapy" target="_blank" class="btn btn-sm btn-icon btn-primary"><span class="mdi mdi-linkedin"></span></a>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<div class="footer-nav">
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'footer-menu',
-								'container_class' => 'navbar navbar-expand-sm',
-								'container_id'    => 'navbarNavDropdown',
-								'menu_class'      => 'navbar-nav mx-auto',
-								'fallback_cb'     => '',
-								'menu_id'         => 'footer-menu',
-								'depth'           => 2,
-								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-							)
-						);
-						?>
-					</div>
-
 					<div class="site-info">
-						
-
+								
 						&copy; <?php echo date("Y"); ?> Wazo Therapy.
 
 					</div><!-- .site-info -->

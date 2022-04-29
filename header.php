@@ -35,6 +35,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	gtag('config', 'G-G1N5C4PQ1B');
 	</script>
 
+	<script id="godaddy-security-s" src="https://cdn.sucuri.net/badge/badge.js" data-s="2027" data-i="8f3849dce06726dcf5967b24fc6c04ad37116d59fc" data-p="r" data-c="l" data-t="g"></script>
+
 	<?php wp_head(); ?>
 </head>
 
